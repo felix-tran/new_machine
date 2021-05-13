@@ -1,5 +1,8 @@
 # Customize your Linux for more efficacy
 
+This might be redundant because I will get a MacBook. I will look into writing a script for macOS instead.
+<https://www.jamf.com/blog/reinstall-a-clean-macos-with-one-button/>
+
 ### Include git branch in terminal.
 
 in `~/.bashrc` at the end add:
