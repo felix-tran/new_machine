@@ -34,21 +34,6 @@ fi
 # Update homebrew recipes
 brew update
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew tap homebrew/dupes
-brew install coreutils
-brew install gnu-sed --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-indent --with-default-names
-brew install gnu-which --with-default-names
-brew install gnu-grep --with-default-names
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install Bash 4
-brew install bash
-
 # sudo vi /etc/shells
 # add the path /usr/local/bin/bash
 # comment out the others
@@ -76,7 +61,6 @@ CASKS=(
     docker
     google-chrome
     google-drive
-    gpgtools
     iterm2
     visual-studio-code
 )
@@ -85,9 +69,9 @@ echo "Installing cask apps..."
 brew cask install ${CASKS[@]}
 
 echo "Installing fonts..."
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 FONTS=(
-    font-cascadia
+    font-fira-code
 )
 brew cask install ${FONTS[@]}
 
