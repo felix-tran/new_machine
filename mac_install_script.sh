@@ -61,9 +61,6 @@ brew install ${PACKAGES[@]}
 echo "Cleaning up..."
 brew cleanup
 
-echo "Installing cask..."
-brew install caskroom/cask/brew-cask
-
 CASKS=(
     docker
     google-chrome
@@ -73,14 +70,14 @@ CASKS=(
 )
 
 echo "Installing cask apps..."
-brew cask install ${CASKS[@]}
+brew install --cask ${CASKS[@]}
 
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
 FONTS=(
     font-fira-code
 )
-brew cask install ${FONTS[@]}
+brew install --cask ${FONTS[@]}
 
 echo "Configuring OSX..."
 
