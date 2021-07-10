@@ -68,6 +68,8 @@ CASKS=(
     iterm2
     visual-studio-code
     calibre
+    spotify
+    firefox
 )
 
 echo "Installing cask apps..."
