@@ -56,6 +56,7 @@ brew cleanup
 
 echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sed -i '' 's/robbyrussell/tjkirch/g' ~/.zshrc
 
 echo "Installing cask..."
 brew install caskroom/cask/brew-cask
