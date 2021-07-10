@@ -54,6 +54,9 @@ brew install ${PACKAGES[@]}
 echo "Cleaning up..."
 brew cleanup
 
+echo "Installing Oh My Zsh..."
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 echo "Installing cask..."
 brew install caskroom/cask/brew-cask
 
