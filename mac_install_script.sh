@@ -64,7 +64,7 @@ brew cleanup
 CASKS=(
     docker
     google-chrome
-    google-drive
+    google-backup-and-sync
     iterm2
     visual-studio-code
 )
