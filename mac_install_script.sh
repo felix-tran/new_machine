@@ -31,6 +31,13 @@ if test ! $(which brew); then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+echo "Installing Oh My Zsh..."
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sed -i '' 's/robbyrussell/tjkirch/g' ~/.zshrc
+
+export PATH="/opt/homebrew/bin:$PATH"
+echo 'export PATH="/opt/homebrew/bin:$PATH"' >> $HOME/.zshrc
+
 # Update homebrew recipes
 brew update
 
@@ -53,10 +60,6 @@ brew install ${PACKAGES[@]}
 
 echo "Cleaning up..."
 brew cleanup
-
-echo "Installing Oh My Zsh..."
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sed -i '' 's/robbyrussell/tjkirch/g' ~/.zshrc
 
 echo "Installing cask..."
 brew install caskroom/cask/brew-cask
