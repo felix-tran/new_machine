@@ -67,6 +67,7 @@ CASKS=(
     google-backup-and-sync
     iterm2
     visual-studio-code
+    calibre
 )
 
 echo "Installing cask apps..."
