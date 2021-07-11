@@ -33,7 +33,7 @@ fi
 
 echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sed -i '' 's/robbyrussell/tjkirch/g' ~/.zshrc
+sed -i '' 's/robbyrussell/murilasso/g' ~/.zshrc
 
 export PATH="/opt/homebrew/bin:$PATH"
 echo 'export PATH="/opt/homebrew/bin:$PATH"' >> $HOME/.zshrc
