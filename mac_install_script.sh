@@ -31,12 +31,12 @@ if test ! $(which brew); then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-echo "Installing Oh My Zsh..."
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sed -i '' 's/robbyrussell/murilasso/g' ~/.zshrc
-
 export PATH="/opt/homebrew/bin:$PATH"
 echo 'export PATH="/opt/homebrew/bin:$PATH"' >> $HOME/.zshrc
+
+echo "Installing Oh My Zsh..."
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sed -i '' 's/robbyrussell/powerlevel10k\/powerlevel10k/g' ~/.zshrc
 
 # Update homebrew recipes
 brew update
@@ -64,12 +64,11 @@ brew cleanup
 CASKS=(
     docker
     google-chrome
-    google-backup-and-sync
+    google-drive
     iterm2
     visual-studio-code
     calibre
     spotify
-    firefox
 )
 
 echo "Installing cask apps..."
@@ -78,8 +77,10 @@ brew install --cask ${CASKS[@]}
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
 FONTS=(
-    font-fira-code
+    font-fira-code-nerd-font
 )
 brew install --cask ${FONTS[@]}
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 echo "Bootstrapping complete"
