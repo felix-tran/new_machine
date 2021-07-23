@@ -33,11 +33,15 @@ fi
 
 export PATH="/opt/homebrew/bin:$PATH"
 echo 'export PATH="/opt/homebrew/bin:$PATH"' >> $HOME/.zshrc
-echo 'export PATH=$PATH:~/Scripts >> $HOME/.zshrc
 
 echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sed -i '' 's/robbyrussell/powerlevel10k\/powerlevel10k/g' ~/.zshrc
+
+echo "Adding Scripts..."
+chmod +x ./Scripts/d_accel
+cp -R ./Scripts ~/Scripts
+echo 'export PATH=$PATH:~/Scripts' >> $HOME/.zshrc
 
 # Update homebrew recipes
 brew update
