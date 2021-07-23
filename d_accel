@@ -1,5 +1,7 @@
 !/bin/bash
 
+## Put this file in ~/Scripts/
+
 if [[ $(defaults read .GlobalPreferences com.apple.mouse.scaling) != -1 ]]; then
   defaults write .GlobalPreferences com.apple.mouse.scaling -1
   echo "Disabling Mouse Acceleration.."
