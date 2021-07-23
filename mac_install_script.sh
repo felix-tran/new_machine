@@ -55,9 +55,7 @@ PACKAGES=(
     git
     go
     nvm
-    python
-    python3
-    wget
+    pyenv
 )
 
 echo "Installing packages..."
@@ -65,6 +63,11 @@ brew install ${PACKAGES[@]}
 
 echo "Cleaning up..."
 brew cleanup
+
+echo "Installing nvm..."
+echo 'export NVM_DIR="$HOME/.nvm"' >> $HOME/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm'  >> $HOME/.zshrc
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> $HOME/.zshrc
 
 CASKS=(
     docker
