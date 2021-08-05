@@ -53,7 +53,7 @@ brew update
 
 PACKAGES=(
     git
-    go
+#   go   Golang needs to be installed with pkg.
     nvm
     pyenv
 )
