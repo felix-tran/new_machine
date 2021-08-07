@@ -72,11 +72,9 @@ echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This
 CASKS=(
     docker
     google-chrome
-    google-drive
     iterm2
     visual-studio-code
     calibre
-    spotify
 )
 
 echo "Installing cask apps..."
