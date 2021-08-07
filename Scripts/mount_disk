@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "mounting Shield disk..."
+
+mount_smbfs //felix:halve-barfly-cowry@192.168.0.20/Disk%203 ~/Desktop/Shield

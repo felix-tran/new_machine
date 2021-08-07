@@ -40,7 +40,9 @@ sed -i '' 's/robbyrussell/powerlevel10k\/powerlevel10k/g' ~/.zshrc
 
 echo "Adding Scripts..."
 chmod +x ./Scripts/d_accel
+chmod +x ./Scripts/mount_disk
 cp -R ./Scripts ~/Scripts
+mkdir ~/Desktop/Shield
 echo 'export PATH=$PATH:~/Scripts' >> $HOME/.zshrc
 
 # Update homebrew recipes
