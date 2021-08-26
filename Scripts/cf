@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## this script is for go fmt files before commit or push
+
+for r in $(git status | grep -oh '\S*.go$')
+do
+  go fmt -x "$r"
+done
